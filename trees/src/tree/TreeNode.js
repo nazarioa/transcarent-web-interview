@@ -1,14 +1,14 @@
-const TreeNode = ({ node, children }) => {
+const TreeNode = ({node, children}) => {
   return (
-    <>
+    <li className="title">
       {node}
       {children &&
-        children.map((node) => (
-          <div key={node.node} className="indent">
-            <TreeNode {...node} />
-          </div>
-        ))}
-    </>
+      children.map(({node, children}) => (
+        <ol key={node} className="values indent">
+          <TreeNode node={node} children={children}/>
+        </ol>
+      ))}
+    </li>
   );
 };
 
