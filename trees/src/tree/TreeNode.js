@@ -8,9 +8,11 @@ const TreeNode = ({node, children, upsideDown = false, level = 0, isLastNode = f
     </label>
   </div>);
 
+  const titleNode = <div>{node} <button className="removeBtn">❌ <span className="sr-only">Remove {node}</span> </button></div>
+
   return (
     <li className={upsideDown ? 'reverse title' : 'title'}>
-      {!upsideDown && node}
+      {!upsideDown && titleNode}
 
       {inputElement}
 
@@ -21,7 +23,7 @@ const TreeNode = ({node, children, upsideDown = false, level = 0, isLastNode = f
                     isLastNode={array.length === index + 1}/>
         </ol>
       ))}
-      {upsideDown && node}
+      {upsideDown && titleNode}
     </li>
   );
 };

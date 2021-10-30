@@ -12,3 +12,9 @@ I bet this is not what you mean
 .silly {
   transform: rotateZ(180deg);
 }
+
+button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
