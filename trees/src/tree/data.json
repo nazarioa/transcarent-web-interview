@@ -1,27 +1,27 @@
 {
-  "title": "root",
-  "values": [
+  "node": "root",
+  "children": [
     {
-      "title": "ant"
+      "node": "ant"
     },
     {
-      "title": "bear",
-      "values": [
+      "node": "bear",
+      "children": [
         {
-          "title": "cat"
+          "node": "cat"
         },
         {
-          "title": "dog",
-          "values": [
+          "node": "dog",
+          "children": [
             {
-              "title": "elephant"
+              "node": "elephant"
             }
           ]
         }
       ]
     },
     {
-      "title": "frog"
+      "node": "frog"
     }
   ]
 }
