@@ -3,8 +3,8 @@ const TreeNode = ({node, children}) => {
     <li className="title">
       {node}
       {children &&
-      children.map(({node, children}) => (
-        <ol key={node} className="values indent">
+      children.map(({node, children}, index) => (
+        <ol key={node} className="values indent" start={index + 1}>
           <TreeNode node={node} children={children}/>
         </ol>
       ))}
