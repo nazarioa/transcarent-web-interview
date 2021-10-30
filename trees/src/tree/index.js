@@ -24,7 +24,9 @@ export default function Tree () {
               <ol className="values">
                 <li className="title">cat</li>
                 <li className="title">dog
-                  <li className="title">elephant</li>
+                  <ol className="title">
+                    <li>elephant</li>
+                  </ol>
                 </li>
               </ol>
             </li>
