@@ -37,9 +37,18 @@ export default function Tree () {
         </li>
       </ol>
 
+      <hr/>
+
       <ol className="values">
         <TreeNode {...data} />
       </ol>
+
+      <hr/>
+
+      <ol className="values silly">
+        <TreeNode {...data} />
+      </ol>
+
     </div>
   );
 }
