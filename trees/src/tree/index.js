@@ -1,4 +1,6 @@
 import './index.css';
+import data from './data.json';
+import TreeNode from './TreeNode';
 
 export default function Tree () {
   return (
@@ -33,6 +35,10 @@ export default function Tree () {
             <li className="title">frog</li>
           </ol>
         </li>
+      </ol>
+
+      <ol className="values">
+        <TreeNode {...data} />
       </ol>
     </div>
   );
