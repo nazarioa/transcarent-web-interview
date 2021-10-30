@@ -49,6 +49,12 @@ export default function Tree () {
         <TreeNode {...data} />
       </ol>
 
+      <hr/>
+
+      <ol className="values">
+        <TreeNode {...data} upsideDown={true}/>
+      </ol>
+
     </div>
   );
 }
