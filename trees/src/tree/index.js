@@ -23,7 +23,11 @@ export default function Tree () {
             <li className="title">bear
               <ol className="values">
                 <li className="title">cat</li>
-                <li className="title">dog</li>
+                <li className="title">dog
+                  <li className="title"> TITLE
+                    <ol className="values"> VALUES </ol> // Optional
+                  </li>
+                </li>
               </ol>
             </li>
             <li className="title">frog</li>
