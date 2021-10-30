@@ -1,27 +1,17 @@
 const TreeNode = ({node, children, upsideDown = false}) => {
-  if(upsideDown) {
-    return (
-      <li className="title">
-        {children &&
-        children.reverse().map(({node, children}, index) => (
-          <ol key={node} className="values indent" start={index + 1}>
-            <TreeNode node={node} children={children} upsideDown={upsideDown}/>
-          </ol>
-        ))}
-        {node}
-      </li>
-    );
-  }
+  children = Array.isArray(children) ? children : [];
+  const data = upsideDown && children.length ? children.reverse() : children;
 
   return (
-    <li className="title">
-      {node}
-      {children &&
-      children.map(({node, children}, index) => (
+    <li className={upsideDown ? 'reverse title' : 'title'}>
+      {!upsideDown && node}
+      {data &&
+      data.map((n, index) => (
         <ol key={node} className="values indent" start={index + 1}>
-          <TreeNode node={node} children={children}/>
+          <TreeNode node={n.node} children={n.children} upsideDown={upsideDown}/>
         </ol>
       ))}
+      {upsideDown && node}
     </li>
   );
 };
