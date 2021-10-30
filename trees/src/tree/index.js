@@ -1,8 +1,19 @@
 import './index.css';
 import data from './data.json';
 import TreeNode from './TreeNode';
+import { useEffect, useState } from 'react';
 
 export default function Tree () {
+
+  const [tree, setTree] = useState({});
+
+  useEffect(() => {
+    setTree(data);
+  }, [setTree]);
+
+  const addHandler = (node, level) => {};
+  const removeHandler = (node, level, item) => {};
+
   return (
     <div className="tree">
       <h2>Original</h2>
@@ -40,7 +51,7 @@ export default function Tree () {
       <hr/>
 
       <ol className="values">
-        <TreeNode {...data} />
+        <TreeNode {...tree} onAdd={addHandler} onRemove={removeHandler} />
       </ol>
     </div>
   );
